@@ -8,7 +8,7 @@ import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import javax.inject.Named
 import javax.inject.Singleton
-import {{ cookiecutter.core_package_dir }}.utils.injection.BaseNetworkModule
+import {{ cookiecutter.core_package_name }}.utils.injection.BaseNetworkModule
 
 @Module
 class NetworkModule : BaseNetworkModule() {
