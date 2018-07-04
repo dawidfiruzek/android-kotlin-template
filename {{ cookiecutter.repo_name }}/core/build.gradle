@@ -21,10 +21,8 @@ dependencies {
     implementation Libs.rxJava
     implementation Libs.rxAndroid
     implementation Libs.dagger2
-    kapt Libs.dagger2Compiler
     implementation Libs.dagger2Android
     implementation Libs.dagger2AndroidSupport
-    kapt Libs.dagger2AndroidCompiler
     implementation Libs.retrofit
     implementation Libs.retrofitGsonConverter
     implementation Libs.retrofitRxAdapter
