@@ -25,4 +25,7 @@ dependencies {
     implementation Libs.dagger2Android
     implementation Libs.dagger2AndroidSupport
     kapt Libs.dagger2AndroidCompiler
+    implementation Libs.retrofit
+    implementation Libs.retrofitGsonConverter
+    implementation Libs.retrofitRxAdapter
 }
