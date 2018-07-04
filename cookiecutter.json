@@ -3,5 +3,7 @@
   "repo_name": "{{ cookiecutter.app_name|lower|replace(' ', '-') }}",
   "package_name": "pl.dawidfiruzek.{{ cookiecutter.app_name|lower|replace(' ', '')|replace('-', '') }}",
   "package_dir": "{{ cookiecutter.package_name | replace('.', '/') }}",
+  "min_sdk": 17,
+  "target_sdk": 27,
   "version": "1.0"
 }

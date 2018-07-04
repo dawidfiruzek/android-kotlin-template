@@ -1,7 +1,7 @@
 object Versions {
-    const val compileSdk = 27
-    const val minSdk = 17
-    const val targetSdk = 27
+    const val compileSdk = {{ cookiecutter.target_sdk }}
+    const val minSdk = {{ cookiecutter.min_sdk }}
+    const val targetSdk = {{ cookiecutter.target_sdk }}
     const val gradle = "3.1.3"
     const val kotlin = "1.2.30"
     const val support = "27.1.1"
