@@ -6,8 +6,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        ClassPaths.kotlinGradlePlugin
-        ClassPaths.gradlePlugin
+        classpath ClassPaths.kotlinGradlePlugin
+        classpath ClassPaths.gradlePlugin
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
