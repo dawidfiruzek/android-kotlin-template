@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="{{ cookiecutter.package_name }}">
+    package="{{ cookiecutter.app_package_name }}">
 
     <application
         android:name=".Application"
