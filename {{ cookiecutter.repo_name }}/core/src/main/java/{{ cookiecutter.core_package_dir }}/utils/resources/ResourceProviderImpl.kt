@@ -6,6 +6,6 @@ class ResourceProviderImpl(
         private val context: Context
 ) : ResourceProvider {
 
-    override fun getString(val stringId: Int): String =
+    override fun getString(stringId: Int): String =
             context.getString(stringId)
 }

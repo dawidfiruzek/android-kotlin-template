@@ -9,7 +9,6 @@ import dagger.Provides
 import dagger.android.AndroidInjectionModule
 import io.reactivex.disposables.CompositeDisposable
 import {{ cookiecutter.app_package_name }}.BaseApplication
-import {{ cookiecutter.app_package_name }}.utils.injection.NetworkModule
 import {{ cookiecutter.core_package_name }}.utils.injection.ConfigurationModule
 import {{ cookiecutter.core_package_name }}.utils.injection.ResourcesModule
 import javax.inject.Singleton

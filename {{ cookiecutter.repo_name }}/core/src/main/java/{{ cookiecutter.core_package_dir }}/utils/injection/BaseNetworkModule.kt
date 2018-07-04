@@ -1,6 +1,5 @@
 package {{ cookiecutter.core_package_name }}.utils.injection
 
-
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
