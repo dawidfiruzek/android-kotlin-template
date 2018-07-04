@@ -21,7 +21,6 @@ class NetworkModule : BaseNetworkModule() {
     @Provides
     fun okHttpClient(stethoInterceptor: Interceptor): OkHttpClient =
             OkHttpClient.Builder()
-                    .addNetworkInterceptor(chuckInterceptor)
                     .addNetworkInterceptor(stethoInterceptor)
                     .build()
 }
