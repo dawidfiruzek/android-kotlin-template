@@ -20,4 +20,9 @@ dependencies {
 
     implementation Libs.rxJava
     implementation Libs.rxAndroid
+    implementation Libs.dagger2
+    kapt Libs.dagger2Compiler
+    implementation Libs.dagger2Android
+    implementation Libs.dagger2AndroidSupport
+    kapt Libs.dagger2AndroidCompiler
 }
