@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath ClassPaths.fabric
+    }
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        applicationId "{{ cookiecutter.package_name }}"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode 1
+        versionName "{{ cookiecutter.version }}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation Libs.kotlinStdlib
+    implementation Libs.supportAppcompat
+
+    testImplementation TestLibs.junit
+    testImplementation TestLibs.mockito
+    androidTestImplementation TestLibs.testRunner
+    androidTestImplementation TestLibs.espressoCore
+
+    implementation(Libs.crashlytics) {
+        transitive = true
+    }
+    implementation Libs.dagger2
+    kapt Libs.dagger2Compiler
+    implementation Libs.dagger2Android
+    kapt Libs.dagger2AndroidCompiler
+    implementation Libs.timber
+    debugImplementation Libs.leakCanary
+    debugImplementation Libs.stetho
+    debugImplementation Libs.stethoNetwork
+}

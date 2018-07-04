@@ -1,5 +1,7 @@
 {
   "app_name": "MyApplication",
   "repo_name": "{{ cookiecutter.app_name|lower|replace(' ', '-') }}",
-  "package_name": "pl.dawidfiruzek.{{ cookiecutter.app_name|lower|replace(' ', '')|replace('-', '') }}"
+  "package_name": "pl.dawidfiruzek.{{ cookiecutter.app_name|lower|replace(' ', '')|replace('-', '') }}",
+  "package_dir": "{{ cookiecutter.package_name | replace('.', '/') }}",
+  "version": "1.0"
 }
