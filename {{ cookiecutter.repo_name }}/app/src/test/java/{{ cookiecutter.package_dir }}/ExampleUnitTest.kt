@@ -1,4 +1,4 @@
-package pl.dawidfiruzek.myapplication
+package {{ cookiecutter.package_name }}
 
 import org.junit.Test
 

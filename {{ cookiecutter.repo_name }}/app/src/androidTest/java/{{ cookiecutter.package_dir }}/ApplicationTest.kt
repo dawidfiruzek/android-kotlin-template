@@ -1,4 +1,4 @@
-package pl.dawidfiruzek.myapplication
+package {{ cookiecutter.package_name }}
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
