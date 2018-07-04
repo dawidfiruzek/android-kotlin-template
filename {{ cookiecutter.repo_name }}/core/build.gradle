@@ -15,8 +15,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation Libs.supportAppcompat
+    implementation Libs.kotlinStdlib
     testImplementation TestLibs.junit
 
     implementation Libs.rxJava
     implementation Libs.rxAndroid
+    implementation Libs.dagger2
+    kapt Libs.dagger2Compiler
+    implementation Libs.dagger2Android
+    implementation Libs.dagger2AndroidSupport
+    kapt Libs.dagger2AndroidCompiler
 }

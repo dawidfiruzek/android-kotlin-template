@@ -1,5 +1,6 @@
 package {{ cookiecutter.app_package_name }}
 
+import android.app.Activity
 import android.app.Application
 import com.crashlytics.android.Crashlytics
 import dagger.android.AndroidInjector
