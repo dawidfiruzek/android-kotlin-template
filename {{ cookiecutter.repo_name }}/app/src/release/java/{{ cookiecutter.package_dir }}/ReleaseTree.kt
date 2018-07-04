@@ -1,4 +1,4 @@
-package {{ cookiecutter.package_name }}
+package {{ cookiecutter.app_package_name }}
 
 import android.util.Log
 import com.crashlytics.android.Crashlytics

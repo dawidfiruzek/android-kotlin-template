@@ -1,4 +1,4 @@
-package {{ cookiecutter.package_name }}
+package {{ cookiecutter.app_package_name }}
 
 import com.facebook.stetho.Stetho
 import com.squareup.leakcanary.LeakCanary

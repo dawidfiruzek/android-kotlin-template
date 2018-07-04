@@ -1,4 +1,4 @@
-package {{ cookiecutter.base_package_name }}.core.presentation
+package {{ cookiecutter.core_package_name }}.presentation
 
 import android.support.v4.app.Fragment
 

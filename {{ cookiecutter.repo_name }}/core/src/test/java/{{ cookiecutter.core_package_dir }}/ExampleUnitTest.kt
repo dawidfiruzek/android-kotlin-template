@@ -1,4 +1,4 @@
-package {{ cookiecutter.base_package_name }}.core
+package {{ cookiecutter.core_package_name }}
 
 import org.junit.Test
 
