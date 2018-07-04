@@ -7,7 +7,7 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import io.fabric.sdk.android.Fabric
-import {{ cookiecutter.core_package_name }}.utils.injection.DaggerAppComponent
+import {{ cookiecutter.app_package_name }}.utils.injection.DaggerAppComponent
 import javax.inject.Inject
 
 abstract class BaseApplication : Application(), HasActivityInjector {

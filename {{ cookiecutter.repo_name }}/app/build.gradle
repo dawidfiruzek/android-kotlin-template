@@ -50,6 +50,8 @@ dependencies {
     implementation(Libs.crashlytics) {
         transitive = true
     }
+    implementation Libs.rxJava
+    implementation Libs.rxAndroid
     implementation Libs.dagger2
     kapt Libs.dagger2Compiler
     implementation Libs.dagger2Android

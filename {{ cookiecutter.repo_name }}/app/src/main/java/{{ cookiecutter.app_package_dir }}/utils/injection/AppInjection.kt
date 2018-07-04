@@ -1,4 +1,4 @@
-package {{ cookiecutter.core_package_name }}.utils.injection
+package {{ cookiecutter.app_package_name }}.utils.injection
 
 import android.app.Application
 import android.content.Context
@@ -8,6 +8,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.android.AndroidInjectionModule
 import io.reactivex.disposables.CompositeDisposable
+import {{ cookiecutter.app_package_name }}.BaseApplication
 import javax.inject.Singleton
 
 @Module
@@ -37,5 +38,5 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
-    fun inject(app: Application)
+    fun inject(app: BaseApplication)
 }
