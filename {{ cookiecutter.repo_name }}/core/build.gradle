@@ -16,4 +16,7 @@ dependencies {
 
     implementation Libs.supportAppcompat
     testImplementation TestLibs.junit
+
+    implementation Libs.rxJava
+    implementation Libs.rxAndroid
 }
