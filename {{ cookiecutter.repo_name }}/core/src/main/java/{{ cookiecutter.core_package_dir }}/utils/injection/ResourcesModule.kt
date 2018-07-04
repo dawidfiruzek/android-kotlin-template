@@ -1,8 +1,8 @@
 package {{ cookiecutter.core_package_name }}.utils.injection
 
 import android.content.Context
-{{ cookiecutter.core_package_dir }}.utils.resources.ResourceProvider
-{{ cookiecutter.core_package_dir }}.utils.resources.ResourceProviderImpl
+{{ cookiecutter.core_package_name }}.utils.resources.ResourceProvider
+{{ cookiecutter.core_package_name }}.utils.resources.ResourceProviderImpl
 import dagger.Module
 import dagger.Provides
 

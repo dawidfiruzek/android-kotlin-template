@@ -4,7 +4,7 @@ package {{ cookiecutter.core_package_name }}.utils.injection
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
-import {{ cookiecutter.core_package_dir }}.utils.configuration.StringConstants
+import {{ cookiecutter.core_package_name }}.utils.configuration.StringConstants
 import retrofit2.CallAdapter
 import retrofit2.Converter
 import retrofit2.Retrofit

@@ -5,8 +5,8 @@ import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import dagger.Module
 import dagger.Provides
-import {{ cookiecutter.core_package_dir }}.utils.configuration.Configuration
-import {{ cookiecutter.core_package_dir }}.utils.configuration.ConfigurationImpl
+import {{ cookiecutter.core_package_name }}.utils.configuration.Configuration
+import {{ cookiecutter.core_package_name }}.utils.configuration.ConfigurationImpl
 
 @Module
 class ConfigurationModule {
