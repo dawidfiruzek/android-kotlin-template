@@ -1,4 +1,4 @@
-package {{ cookiecutter.core_package_dir }}.utils.resources
+package {{ cookiecutter.core_package_name }}.utils.resources
 
 interface ResourceProvider {
 

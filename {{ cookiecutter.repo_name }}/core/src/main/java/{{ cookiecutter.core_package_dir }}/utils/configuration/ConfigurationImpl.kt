@@ -1,4 +1,4 @@
-package {{ cookiecutter.core_package_dir }}.utils.configuration
+package {{ cookiecutter.core_package_name }}.utils.configuration
 
 import android.content.SharedPreferences
 

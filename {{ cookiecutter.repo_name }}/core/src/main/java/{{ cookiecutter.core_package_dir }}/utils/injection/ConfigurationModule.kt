@@ -1,4 +1,4 @@
-package {{ cookiecutter.core_package_dir }}.utils.injection
+package {{ cookiecutter.core_package_name }}.utils.injection
 
 import android.content.Context
 import android.content.SharedPreferences
