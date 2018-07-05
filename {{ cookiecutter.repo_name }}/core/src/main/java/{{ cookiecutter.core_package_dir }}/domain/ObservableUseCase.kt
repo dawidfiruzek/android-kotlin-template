@@ -2,7 +2,7 @@ package {{ cookiecutter.core_package_name }}.domain
 
 import io.reactivex.Observable
 
-interface ObservableUseCase<in Params, Return> {
+interface ObservableUseCase<in Params, Return> : UseCase {
 
     fun build(params: Params? = null): Observable<Return>
 }
