@@ -18,18 +18,10 @@ object Versions {
     const val rxJava = "2.1.11"
     const val retrofit = "2.4.0"
     const val stetho = "1.5.0"
-    {% if cookiecutter.lottie_lib == "y" %}
-    const val lottie = "2.5.1"
-    {% endif %}
-    {% if cookiecutter.rx_permissions_lib == "y" %}
-    const val rxPermissions = "0.9.5"
-    {% endif %}
-    {% if cookiecutter.glide_lib == "y" %}
-    const val glide = "4.6.1"
-    {% endif %}
-    {% if cookiecutter.amplitude_lib == "y" %}
-    const val amplitude = "2.16.0"
-    {% endif %}
+    {% if cookiecutter.lottie_lib == "y" %}const val lottie = "2.5.1"{% endif %}
+    {% if cookiecutter.rx_permissions_lib == "y" %}const val rxPermissions = "0.9.5"{% endif %}
+    {% if cookiecutter.glide_lib == "y" %}const val glide = "4.6.1"{% endif %}
+    {% if cookiecutter.amplitude_lib == "y" %}const val amplitude = "2.16.0"{% endif %}
 }
 
 object ClassPaths {
@@ -57,21 +49,11 @@ object Libs {
     const val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
     const val stethoNetwork = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
-    {% if cookiecutter.lottie_lib == "y" %}
-    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
-    {% endif %}
-    {% if cookiecutter.rx_permissions_lib == "y" %}
-    const val rxPremissions = "com.tbruyelle.rxpermissions2:rxpermissions:${Versions.rxPermissions}@aar"
-    {% endif %}
-    {% if cookiecutter.glide_lib == "y" %}
-    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
-    {% endif %}
-    {% if cookiecutter.glide_lib == "y" %}
-    const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
-    {% endif %}
-    {% if cookiecutter.amplitude_lib == "y" %}
-    const val amplitude = "com.amplitude:android-sdk:${Versions.amplitude}"
-    {% endif %}
+    {% if cookiecutter.lottie_lib == "y" %}const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"{% endif %}
+    {% if cookiecutter.rx_permissions_lib == "y" %}const val rxPremissions = "com.tbruyelle.rxpermissions2:rxpermissions:${Versions.rxPermissions}@aar"{% endif %}
+    {% if cookiecutter.glide_lib == "y" %}const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"{% endif %}
+    {% if cookiecutter.glide_lib == "y" %}const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"{% endif %}
+    {% if cookiecutter.amplitude_lib == "y" %}const val amplitude = "com.amplitude:android-sdk:${Versions.amplitude}"{% endif %}
 }
 
 object TestLibs {
