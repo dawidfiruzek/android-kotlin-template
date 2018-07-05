@@ -13,3 +13,4 @@ class NetworkModule : BaseNetworkModule() {
     @Provides
     fun okHttpClient(): OkHttpClient =
             OkHttpClient()
+}
