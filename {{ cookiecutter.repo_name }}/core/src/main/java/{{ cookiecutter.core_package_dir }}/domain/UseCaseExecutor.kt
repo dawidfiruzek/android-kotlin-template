@@ -1,4 +1,4 @@
-package `{{ cookiecutter`.`core_package_dir }}`.domain
+package {{ cookiecutter.core_package_name }}.domain
 
 import io.reactivex.Completable
 import io.reactivex.Flowable
