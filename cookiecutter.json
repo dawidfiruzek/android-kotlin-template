@@ -8,5 +8,9 @@
   "core_package_dir": "{{ cookiecutter.core_package_name | replace('.', '/') }}",
   "min_sdk": 17,
   "target_sdk": 27,
-  "version": "1.0"
+  "version": "1.0",
+  "lottie_lib": "n",
+  "rx_permissions_lib": "n",
+  "glide_lib": "n",
+  "amplitude_lib": "n"
 }

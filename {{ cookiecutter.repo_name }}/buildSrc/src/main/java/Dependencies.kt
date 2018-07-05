@@ -13,17 +13,23 @@ object Versions {
     const val crashlytics = "2.9.1"
     const val timber = "4.6.1"
     const val leakCanary = "1.5.4"
-    const val butterknife = "8.8.1"
-    const val rxBinding = "2.1.1"
     const val dagger2 = "2.14.1"
     const val rxAndroid = "2.0.2"
     const val rxJava = "2.1.11"
-    const val lottie = "2.5.1"
-    const val rxPermissions = "0.9.5"
     const val retrofit = "2.4.0"
     const val stetho = "1.5.0"
+    {% if cookiecutter.lottie_lib == "y" %}
+    const val lottie = "2.5.1"
+    {% endif %}
+    {% if cookiecutter.rx_permissions_lib == "y" %}
+    const val rxPermissions = "0.9.5"
+    {% endif %}
+    {% if cookiecutter.glide_lib == "y" %}
     const val glide = "4.6.1"
+    {% endif %}
+    {% if cookiecutter.amplitude_lib == "y" %}
     const val amplitude = "2.16.0"
+    {% endif %}
 }
 
 object ClassPaths {
@@ -39,9 +45,6 @@ object Libs {
     const val crashlytics = "com.crashlytics.sdk.android:crashlytics:${Versions.crashlytics}@aar"
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
-    const val butterknife = "com.jakewharton:butterknife:${Versions.butterknife}"
-    const val butterknifeCompiler = "com.jakewharton:butterknife-compiler:${Versions.butterknife}"
-    const val rxBinding = "com.jakewharton.rxbinding2:rxbinding:${Versions.rxBinding}"
     const val dagger2 = "com.google.dagger:dagger:${Versions.dagger2}"
     const val dagger2Compiler = "com.google.dagger:dagger-compiler:${Versions.dagger2}"
     const val dagger2Android = "com.google.dagger:dagger-android:${Versions.dagger2}"
@@ -49,16 +52,26 @@ object Libs {
     const val dagger2AndroidCompiler = "com.google.dagger:dagger-android-processor:${Versions.dagger2}"
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxAndroid}"
     const val rxJava = "io.reactivex.rxjava2:rxjava:${Versions.rxJava}"
-    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
-    const val rxPremissions = "com.tbruyelle.rxpermissions2:rxpermissions:${Versions.rxPermissions}@aar"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
     const val stethoNetwork = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
+    {% if cookiecutter.lottie_lib == "y" %}
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
+    {% endif %}
+    {% if cookiecutter.rx_permissions_lib == "y" %}
+    const val rxPremissions = "com.tbruyelle.rxpermissions2:rxpermissions:${Versions.rxPermissions}@aar"
+    {% endif %}
+    {% if cookiecutter.glide_lib == "y" %}
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    {% endif %}
+    {% if cookiecutter.glide_lib == "y" %}
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+    {% endif %}
+    {% if cookiecutter.amplitude_lib == "y" %}
     const val amplitude = "com.amplitude:android-sdk:${Versions.amplitude}"
+    {% endif %}
 }
 
 object TestLibs {
