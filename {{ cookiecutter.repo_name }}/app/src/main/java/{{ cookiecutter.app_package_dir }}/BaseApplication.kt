@@ -2,6 +2,7 @@ package {{ cookiecutter.app_package_name }}
 
 import android.app.Activity
 import android.app.Application
+import com.amplitude.api.Amplitude
 import com.crashlytics.android.Crashlytics
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
