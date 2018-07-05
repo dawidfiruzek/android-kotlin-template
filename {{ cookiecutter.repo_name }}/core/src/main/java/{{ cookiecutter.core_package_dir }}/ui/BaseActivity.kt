@@ -10,16 +10,28 @@ import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
+import {{ cookiecutter.core_package_name }}.BaseContract
 import javax.inject.Inject
 
-abstract class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector {
+abstract class BaseActivity<Presenter : BaseContract.Presenter> : AppCompatActivity(), HasSupportFragmentInjector {
 
     @Inject lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
+    @Inject lateinit var presenter: Presenter
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        presenter.initialize()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        presenter.clear()
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> =
