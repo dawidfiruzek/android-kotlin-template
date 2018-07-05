@@ -2,14 +2,14 @@ package {{ cookiecutter.app_package_name }}
 
 import android.app.Activity
 import android.app.Application
-import com.amplitude.api.Amplitude
+{% if cookiecutter.amplitude_lib == "y" %}import com.amplitude.api.Amplitude{% endif %}
 import com.crashlytics.android.Crashlytics
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import io.fabric.sdk.android.Fabric
 import {{ cookiecutter.app_package_name }}.utils.injection.DaggerAppComponent
-import {{ cookiecutter.core_package_name }}.utils.configuration.StringConstants
+{% if cookiecutter.amplitude_lib == "y" %}import {{ cookiecutter.core_package_name }}.utils.configuration.StringConstants{% endif %}
 import javax.inject.Inject
 
 abstract class BaseApplication : Application(), HasActivityInjector {
