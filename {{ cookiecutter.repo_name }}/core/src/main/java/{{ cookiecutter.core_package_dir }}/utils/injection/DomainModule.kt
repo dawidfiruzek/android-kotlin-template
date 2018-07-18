@@ -1,6 +1,5 @@
 package {{ cookiecutter.core_package_name }}.utils.injection
 
-import android.content.Context
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
