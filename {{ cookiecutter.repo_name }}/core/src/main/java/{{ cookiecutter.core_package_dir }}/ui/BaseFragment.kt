@@ -2,6 +2,7 @@ package {{ cookiecutter.core_package_name }}.ui
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
+import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
 import android.support.annotation.CallSuper
@@ -11,7 +12,6 @@ import android.view.View
 import android.view.ViewGroup
 import dagger.android.support.AndroidSupportInjection
 import android.arch.lifecycle.ViewModel
-import android.os.Bundle
 import {{ cookiecutter.core_package_name }}.utils.ViewModelFactory
 import javax.inject.Inject
 
@@ -21,6 +21,7 @@ abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
     protected lateinit var viewModel: VM
     protected lateinit var dataBinding: DB
     protected abstract val viewModelClassToken: Class<VM>
+    protected abstract val layoutId: Int
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,7 @@ abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        dataBinding = DB.inflate(inflater, container, false)
+        dataBinding = DataBindingUtil.inflate(inflater, layoutId, container, false)
         dataBinding.setLifecycleOwner(this)
         return dataBinding.getRoot()
     }
