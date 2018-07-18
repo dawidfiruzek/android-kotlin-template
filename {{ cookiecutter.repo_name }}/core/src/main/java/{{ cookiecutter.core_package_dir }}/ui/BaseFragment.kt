@@ -6,12 +6,15 @@ import android.support.annotation.CallSuper
 import android.support.v4.app.Fragment
 import dagger.android.support.AndroidSupportInjection
 import android.arch.lifecycle.ViewModel
+import android.os.Bundle
+import {{ cookiecutter.core_package_name }}.utils.ViewModelFactory
+import javax.inject.Inject
 
 abstract class BaseFragment<VM : ViewModel> : Fragment() {
 
     @Inject lateinit var viewModelFactory: ViewModelFactory<VM>
     protected lateinit var viewModel: VM
-    protected abstract viewModelClassToken: Class<VM>
+    protected abstract val viewModelClassToken: Class<VM>
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {

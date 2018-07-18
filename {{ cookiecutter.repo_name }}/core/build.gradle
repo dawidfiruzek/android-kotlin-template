@@ -26,5 +26,5 @@ dependencies {
     implementation Libs.retrofit
     implementation Libs.retrofitGsonConverter
     implementation Libs.retrofitRxAdapter
-    implementation Libs.lifecycle
+    api Libs.lifecycle
 }
