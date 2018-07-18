@@ -3,10 +3,10 @@ package {{ cookiecutter.core_package_name }}.utils.injection
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import dagger.Named
 import io.reactivex.Scheduler
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.android.schedulers.AndroidSchedulers
+import javax.inject.Named
 
 @Module
 class DomainModule {
