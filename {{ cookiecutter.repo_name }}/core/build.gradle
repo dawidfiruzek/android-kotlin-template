@@ -9,6 +9,9 @@ android {
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {

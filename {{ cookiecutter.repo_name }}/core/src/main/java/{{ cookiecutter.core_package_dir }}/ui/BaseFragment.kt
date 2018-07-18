@@ -2,6 +2,7 @@ package {{ cookiecutter.core_package_name }}.ui
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
+import android.databinding.ViewDataBinding
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.v4.app.Fragment
@@ -14,10 +15,11 @@ import android.os.Bundle
 import {{ cookiecutter.core_package_name }}.utils.ViewModelFactory
 import javax.inject.Inject
 
-abstract class BaseFragment<VM : ViewModel> : Fragment() {
+abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
 
     @Inject lateinit var viewModelFactory: ViewModelFactory<VM>
     protected lateinit var viewModel: VM
+    protected lateinit var dataBinding: DB
     protected abstract val viewModelClassToken: Class<VM>
 
     @CallSuper
@@ -27,11 +29,9 @@ abstract class BaseFragment<VM : ViewModel> : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        /* todo
-        val binding: FragmentMainBinding = ...
-        binding.setLifecycleOwner(this)
-         */
-        return super.onCreateView(inflater, container, savedInstanceState)
+        dataBinding = DB.inflate(inflater, container, false)
+        dataBinding.setLifecycleOwner(this)
+        return dataBinding.getRoot()
     }
 
     @CallSuper
