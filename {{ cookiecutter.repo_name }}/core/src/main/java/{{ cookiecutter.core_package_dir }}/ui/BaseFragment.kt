@@ -2,8 +2,12 @@ package {{ cookiecutter.core_package_name }}.ui
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
+import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.v4.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import dagger.android.support.AndroidSupportInjection
 import android.arch.lifecycle.ViewModel
 import android.os.Bundle
@@ -20,6 +24,14 @@ abstract class BaseFragment<VM : ViewModel> : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelClassToken)
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        /* todo
+        val binding: FragmentMainBinding = ...
+        binding.setLifecycleOwner(this)
+         */
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     @CallSuper
