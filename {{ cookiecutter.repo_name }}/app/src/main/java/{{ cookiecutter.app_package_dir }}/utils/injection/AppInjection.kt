@@ -1,7 +1,10 @@
 package {{ cookiecutter.app_package_name }}.utils.injection
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
+import android.support.v4.app.Fragment
+import dagger.Binds
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
@@ -33,7 +36,8 @@ class AppModule {
     NetworkModule::class,
     ConfigurationModule::class,
     ResourcesModule::class,
-    DomainModule::class
+    DomainModule::class,
+    BindingModule::class
 ])
 interface AppComponent {
 
@@ -46,4 +50,14 @@ interface AppComponent {
     }
 
     fun inject(app: BaseApplication)
+}
+
+@Module
+abstract class BindingModule {
+
+    @Binds
+    abstract fun activity(activity: Activity): Activity
+
+    @Binds
+    abstract fun fragment(fragment: Fragment): Fragment
 }

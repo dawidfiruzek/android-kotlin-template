@@ -22,6 +22,7 @@ abstract class BaseApplication : Application(), HasActivityInjector {
         Fabric.with(this, Crashlytics())
         {% if cookiecutter.amplitude_lib == "y" %}Amplitude.getInstance().initialize(this, StringConstants.AMPLITUDE_KEY){% endif %}
         initTimber()
+        initDaggerComponent()
     }
 
     abstract fun initTimber()
