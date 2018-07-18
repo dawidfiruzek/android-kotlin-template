@@ -51,7 +51,7 @@ object Libs {
     const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
     const val stethoNetwork = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
     const val lifecycle = "android.arch.lifecycle:extensions:${Versions.lifecycle}"
-    const val lifecycleCompiler "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
+    const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
     {% if cookiecutter.lottie_lib == "y" %}const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"{% endif %}
     {% if cookiecutter.rx_permissions_lib == "y" %}const val rxPremissions = "com.tbruyelle.rxpermissions2:rxpermissions:${Versions.rxPermissions}@aar"{% endif %}
     {% if cookiecutter.glide_lib == "y" %}const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"{% endif %}
