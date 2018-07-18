@@ -3,7 +3,7 @@ package {{ cookiecutter.core_package_name }}.ui
 import {{ cookiecutter.core_package_name }}.BaseContract
 import javax.inject.Inject
 
-abstract class BasePresenterActivity<Presenter : BaseContract.Presenter> : BaseActivity(), HasSupportFragmentInjector {
+abstract class BasePresenterActivity<Presenter : BaseContract.Presenter> : BaseActivity() {
 
     @Inject lateinit var presenter: Presenter
 
