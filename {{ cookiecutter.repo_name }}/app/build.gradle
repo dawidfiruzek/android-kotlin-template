@@ -65,6 +65,5 @@ dependencies {
     debugImplementation Libs.stetho
     debugImplementation Libs.stethoNetwork
     implementation Libs.retrofit
-    kapt Libs.lifecycleCompiler
     {% if cookiecutter.amplitude_lib == "y" %}implementation Libs.amplitude{% endif %}
 }
