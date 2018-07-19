@@ -21,7 +21,6 @@ abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
     protected lateinit var viewModel: VM
     protected lateinit var dataBinding: DB
     protected abstract val viewModelClassToken: Class<VM>
-    protected abstract val layoutId: Int
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,11 +28,14 @@ abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelClassToken)
     }
 
+    @CallSuper
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        dataBinding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        dataBinding = getBinding()
         dataBinding.setLifecycleOwner(this)
-        return dataBinding.getRoot()
+        return dataBinding.root
     }
+
+    abstract fun getBinding(): DB
 
     @CallSuper
     override fun onAttach(context: Context) {

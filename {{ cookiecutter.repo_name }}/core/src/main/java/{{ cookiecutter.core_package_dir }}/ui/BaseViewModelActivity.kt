@@ -15,13 +15,14 @@ abstract class BaseViewModelActivity<VM : ViewModel, DB: ViewDataBinding> : Base
     protected lateinit var viewModel: VM
     protected lateinit var dataBinding: DB
     protected abstract val viewModelClassToken: Class<VM>
-    protected abstract val layoutId: Int
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(viewModelClassToken)
-        dataBinding = DataBindingUtil.setContentView(this, layoutId)
+        dataBinding = getBinding()
         dataBinding.setLifecycleOwner(this)
     }
+
+    abstract fun getBinding(): DB
 }
