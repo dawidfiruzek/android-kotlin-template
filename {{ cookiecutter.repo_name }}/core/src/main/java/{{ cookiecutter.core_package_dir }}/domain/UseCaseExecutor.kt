@@ -47,12 +47,13 @@ class UseCaseExecutor(
             onError: Consumer<Throwable>,
             onComplete: Action? = null,
             onSubscribe: Consumer<Disposable>? = null) {
+        var o = observable
+        onComplete?.let { o = o.doOnComplete(it) }
+        onSubscribe?.let { o = o.doOnSubscribe(it) }
+
         compositeDisposable.add(
-                observable
-                        .subscribeOn(subscribeOnScheduler)
+                o.subscribeOn(subscribeOnScheduler)
                         .observeOn(observeOnScheduler)
-                        .doOnComplete(onComplete)
-                        .doOnSubscribe(onSubscribe)
                         .subscribe(onSuccess, onError)
         )
     }
@@ -63,12 +64,13 @@ class UseCaseExecutor(
             onError: Consumer<Throwable>,
             onComplete: Action? = null,
             onSubscribe: Consumer<Subscription>? = null) {
+        var f = flowable
+        onComplete?.let { f = f.doOnComplete(it) }
+        onSubscribe?.let { f = f.doOnSubscribe(it) }
+
         compositeDisposable.add(
-                flowable
-                        .subscribeOn(subscribeOnScheduler)
+                f.subscribeOn(subscribeOnScheduler)
                         .observeOn(observeOnScheduler)
-                        .doOnComplete(onComplete)
-                        .doOnSubscribe(onSubscribe)
                         .subscribe(onSuccess, onError)
         )
     }
