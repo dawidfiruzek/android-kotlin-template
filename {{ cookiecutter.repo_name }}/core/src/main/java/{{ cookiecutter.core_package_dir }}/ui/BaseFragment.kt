@@ -30,12 +30,12 @@ abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
 
     @CallSuper
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        dataBinding = getBinding()
+        dataBinding = getBinding(inflater, container)
         dataBinding.setLifecycleOwner(this)
         return dataBinding.root
     }
 
-    abstract fun getBinding(): DB
+    abstract fun getBinding(inflater: LayoutInflater, container: ViewGroup?): DB
 
     @CallSuper
     override fun onAttach(context: Context) {
