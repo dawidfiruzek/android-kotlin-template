@@ -9,6 +9,10 @@ import dagger.Module
 import dagger.Provides
 import dagger.android.AndroidInjectionModule
 import {{ cookiecutter.app_package_name }}.BaseApplication
+import {{ cookiecutter.core_package_name }}.utils.injection.ConfigurationModule
+import {{ cookiecutter.core_package_name }}.utils.injection.ResourcesModule
+import {{ cookiecutter.core_package_name }}.utils.injection.DomainModule
+import {{ cookiecutter.core_package_name }}.utils.injection.BindingModule
 import javax.inject.Singleton
 
 @Module
