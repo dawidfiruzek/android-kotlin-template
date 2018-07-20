@@ -18,6 +18,7 @@ object Versions {
     const val rxJava = "2.1.11"
     const val retrofit = "2.4.0"
     const val stetho = "1.5.0"
+    const val constraintLayout = "1.1.2"
     const val lifecycle = "1.1.1"
     {% if cookiecutter.lottie_lib == "y" %}const val lottie = "2.5.1"{% endif %}
     {% if cookiecutter.rx_permissions_lib == "y" %}const val rxPermissions = "0.9.5"{% endif %}
@@ -50,6 +51,7 @@ object Libs {
     const val retrofitRxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
     const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
     const val stethoNetwork = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
+    const val constraintLayout = "com.android.support.constraint:constraint-layout:${Versions.constraintLayout}"
     const val lifecycle = "android.arch.lifecycle:extensions:${Versions.lifecycle}"
     const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
     {% if cookiecutter.lottie_lib == "y" %}const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"{% endif %}
