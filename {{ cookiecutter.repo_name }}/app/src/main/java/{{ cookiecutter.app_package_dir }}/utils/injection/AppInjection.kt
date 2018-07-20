@@ -2,13 +2,13 @@ package {{ cookiecutter.app_package_name }}.utils.injection.app
 
 import android.app.Application
 import android.content.Context
-import dagger.Binds
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.android.AndroidInjectionModule
 import {{ cookiecutter.app_package_name }}.BaseApplication
+import {{ cookiecutter.app_package_name }}.utils.injection.NetworkModule
 import {{ cookiecutter.core_package_name }}.utils.injection.ConfigurationModule
 import {{ cookiecutter.core_package_name }}.utils.injection.ResourcesModule
 import {{ cookiecutter.core_package_name }}.utils.injection.DomainModule
