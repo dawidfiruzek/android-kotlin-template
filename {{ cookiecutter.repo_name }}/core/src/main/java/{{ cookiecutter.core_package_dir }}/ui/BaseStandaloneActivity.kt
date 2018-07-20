@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseStandaloneActivity : AppCompatActivity() {
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
