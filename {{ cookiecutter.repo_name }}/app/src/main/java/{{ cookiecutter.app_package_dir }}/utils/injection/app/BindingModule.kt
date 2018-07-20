@@ -1,4 +1,4 @@
-package {{ cookiecutter.core_package_name }}.utils.injection
+package {{ cookiecutter.core_package_name }}.utils.injection.app
 
 import android.app.Activity
 import android.support.v4.app.Fragment

@@ -12,10 +12,11 @@ import io.reactivex.functions.Consumer
 import org.reactivestreams.Subscription
 
 class UseCaseExecutor(
-        private val compositeDisposable: CompositeDisposable,
-        private val observeOnScheduler: Scheduler,
-        private val subscribeOnScheduler: Scheduler
+        private val subscribeOnScheduler: Scheduler,
+        private val observeOnScheduler: Scheduler
 ) {
+
+    private val compositeDisposable = CompositeDisposable()
 
     fun execute(
             completable: Completable,
