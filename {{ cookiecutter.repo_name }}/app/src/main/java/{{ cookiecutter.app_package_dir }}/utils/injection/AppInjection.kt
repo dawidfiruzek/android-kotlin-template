@@ -1,4 +1,4 @@
-package {{ cookiecutter.app_package_name }}.utils.injection.app
+package {{ cookiecutter.app_package_name }}.utils.injection
 
 import android.app.Application
 import android.content.Context
