@@ -1,4 +1,4 @@
-package {{ cookiecutter.app_package_name }}.utils.injection
+package {{ cookiecutter.app_package_name }}.utils.injection.app
 
 import android.app.Application
 import android.content.Context
@@ -8,12 +8,7 @@ import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.android.AndroidInjectionModule
-import io.reactivex.disposables.CompositeDisposable
 import {{ cookiecutter.app_package_name }}.BaseApplication
-import {{ cookiecutter.core_package_name }}.utils.injection.BindingModule
-import {{ cookiecutter.core_package_name }}.utils.injection.DomainModule
-import {{ cookiecutter.core_package_name }}.utils.injection.ConfigurationModule
-import {{ cookiecutter.core_package_name }}.utils.injection.ResourcesModule
 import javax.inject.Singleton
 
 @Module
@@ -22,10 +17,6 @@ class AppModule {
     @Provides
     fun context(app: Application): Context =
             app
-
-    @Provides
-    fun compositeDisposable(): CompositeDisposable =
-            CompositeDisposable()
 }
 
 @Singleton
