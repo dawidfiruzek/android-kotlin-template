@@ -12,5 +12,7 @@
   "lottie_lib": "n",
   "rx_permissions_lib": "n",
   "glide_lib": "n",
-  "amplitude_lib": "n"
+  "amplitude_lib": "n",
+  "fabric_api_key": "0",
+  "fabric_secret": "0"
 }
