@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.v7.app.AppCompatActivity
 import dagger.android.AndroidInjection
-import javax.inject.Inject
 
 abstract class BaseStandaloneActivity : AppCompatActivity() {
 

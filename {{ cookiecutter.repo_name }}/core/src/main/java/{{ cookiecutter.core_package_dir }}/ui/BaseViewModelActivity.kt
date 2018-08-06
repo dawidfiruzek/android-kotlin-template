@@ -2,11 +2,10 @@ package {{ cookiecutter.core_package_name }}.ui
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
 import android.support.annotation.CallSuper
-import pl.dawidfiruzek.core.utils.ViewModelFactory
+import {{ cookiecutter.core_package_name }}.utils.ViewModelFactory
 import javax.inject.Inject
 
 abstract class BaseViewModelActivity<VM : ViewModel, DB: ViewDataBinding> : BaseActivity() {
