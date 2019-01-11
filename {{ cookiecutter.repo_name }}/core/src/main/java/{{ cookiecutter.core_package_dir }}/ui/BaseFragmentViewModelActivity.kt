@@ -9,7 +9,7 @@ import android.support.annotation.CallSuper
 import pl.dawidfiruzek.core.utils.ViewModelFactory
 import javax.inject.Inject
 
-abstract class BaseStandaloneViewModelActivity<VM : ViewModel, DB: ViewDataBinding> : BaseStandaloneActivity() {
+abstract class BaseFragmentViewModelActivity<VM : ViewModel, DB: ViewDataBinding> : BaseFragmentActivity() {
 
     @Inject lateinit var viewModelFactory: ViewModelFactory<VM>
     protected lateinit var viewModel: VM
