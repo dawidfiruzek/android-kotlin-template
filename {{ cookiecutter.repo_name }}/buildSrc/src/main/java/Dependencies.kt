@@ -20,10 +20,6 @@ object Versions {
     const val stetho = "1.5.0"
     const val constraintLayout = "1.1.2"
     const val lifecycle = "1.1.1"
-    {% if cookiecutter.lottie_lib == "y" %}const val lottie = "2.5.1"{% endif %}
-    {% if cookiecutter.rx_permissions_lib == "y" %}const val rxPermissions = "0.9.5"{% endif %}
-    {% if cookiecutter.glide_lib == "y" %}const val glide = "4.6.1"{% endif %}
-    {% if cookiecutter.amplitude_lib == "y" %}const val amplitude = "2.16.0"{% endif %}
 }
 
 object ClassPaths {
@@ -54,11 +50,6 @@ object Libs {
     const val constraintLayout = "com.android.support.constraint:constraint-layout:${Versions.constraintLayout}"
     const val lifecycle = "android.arch.lifecycle:extensions:${Versions.lifecycle}"
     const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
-    {% if cookiecutter.lottie_lib == "y" %}const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"{% endif %}
-    {% if cookiecutter.rx_permissions_lib == "y" %}const val rxPremissions = "com.tbruyelle.rxpermissions2:rxpermissions:${Versions.rxPermissions}@aar"{% endif %}
-    {% if cookiecutter.glide_lib == "y" %}const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"{% endif %}
-    {% if cookiecutter.glide_lib == "y" %}const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"{% endif %}
-    {% if cookiecutter.amplitude_lib == "y" %}const val amplitude = "com.amplitude:android-sdk:${Versions.amplitude}"{% endif %}
 }
 
 object TestLibs {
