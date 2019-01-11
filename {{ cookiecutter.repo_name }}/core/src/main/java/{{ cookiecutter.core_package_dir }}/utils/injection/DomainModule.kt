@@ -12,10 +12,10 @@ import javax.inject.Named
 class DomainModule {
 
     companion object {
-        const val UI_EXECUTION = "ui"
-        const val IO_EXECUTION = "io"
-        const val COMPUTATION_EXECUTION = "computation"
-        const val NEW_THREAD_EXECUTION = "new thread"
+        const val UI_EXECUTION = "{{ cookiecutter.core_package_name }}.schedulers.ui"
+        const val IO_EXECUTION = "{{ cookiecutter.core_package_name }}.schedulers.io"
+        const val COMPUTATION_EXECUTION = "{{ cookiecutter.core_package_name }}.schedulers.computation"
+        const val NEW_THREAD_EXECUTION = "{{ cookiecutter.core_package_name }}.schedulers.new thread"
     }
 
     @Provides
