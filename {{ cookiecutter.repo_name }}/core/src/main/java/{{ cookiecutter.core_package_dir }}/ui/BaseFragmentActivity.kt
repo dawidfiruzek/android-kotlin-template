@@ -5,9 +5,10 @@ import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
+import {{ cookiecutter.core_package_name }}.presentation.BaseContract
 import javax.inject.Inject
 
-abstract class BaseFragmentActivity : BaseActivity(), HasSupportFragmentInjector {
+abstract class BaseFragmentActivity<Presenter : BaseContract.Presenter> : BaseActivity<Presenter>(), HasSupportFragmentInjector {
 
     @Inject lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
 

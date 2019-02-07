@@ -4,7 +4,7 @@ import android.content.Context
 import android.support.annotation.CallSuper
 import android.support.v4.app.Fragment
 import dagger.android.support.AndroidSupportInjection
-import {{ cookiecutter.core_package_name }}.BaseContract
+import {{ cookiecutter.core_package_name }}.presentation.BaseContract
 import javax.inject.Inject
 
 abstract class BaseFragment<Presenter : BaseContract.Presenter> : Fragment() {

@@ -1,4 +1,4 @@
-package {{ cookiecutter.core_package_name }}
+package {{ cookiecutter.core_package_name }}.presentation
 
 interface BaseContract {
 
