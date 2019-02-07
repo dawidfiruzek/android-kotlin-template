@@ -13,9 +13,3 @@ abstract class BaseFragment : Fragment() {
         super.onAttach(context)
     }
 }
-
-interface NavigationEvent
-
-interface NavigationListener {
-    fun handleEvent(event: NavigationEvent)
-}
