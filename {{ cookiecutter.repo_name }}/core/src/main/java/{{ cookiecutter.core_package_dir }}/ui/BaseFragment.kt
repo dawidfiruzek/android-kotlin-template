@@ -27,9 +27,3 @@ abstract class BaseFragment<Presenter : BaseContract.Presenter> : Fragment() {
         presenter.clear()
     }
 }
-
-interface NavigationEvent
-
-interface NavigationListener {
-    fun handleEvent(event: NavigationEvent)
-}
