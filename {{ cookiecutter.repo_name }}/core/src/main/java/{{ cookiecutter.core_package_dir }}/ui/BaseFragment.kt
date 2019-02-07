@@ -12,7 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import dagger.android.support.AndroidSupportInjection
 import android.arch.lifecycle.ViewModel
-import {{ cookiecutter.core_package_name }}.utils.ViewModelFactory
+import {{ cookiecutter.core_package_name }}.presentation.ViewModelFactory
 import javax.inject.Inject
 
 abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {

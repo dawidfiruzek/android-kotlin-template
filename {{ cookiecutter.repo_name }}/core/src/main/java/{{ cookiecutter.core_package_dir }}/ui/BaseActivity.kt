@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.v7.app.AppCompatActivity
 import dagger.android.AndroidInjection
-import {{ cookiecutter.core_package_name }}.utils.ViewModelFactory
+import {{ cookiecutter.core_package_name }}.presentation.ViewModelFactory
 import javax.inject.Inject
 
 abstract class BaseActivity<VM : ViewModel, DB: ViewDataBinding> : AppCompatActivity() {
