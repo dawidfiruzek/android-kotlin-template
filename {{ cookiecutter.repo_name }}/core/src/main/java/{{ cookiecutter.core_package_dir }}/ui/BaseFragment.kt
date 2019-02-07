@@ -2,7 +2,6 @@ package {{ cookiecutter.core_package_name }}.ui
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
-import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
 import android.support.annotation.CallSuper
