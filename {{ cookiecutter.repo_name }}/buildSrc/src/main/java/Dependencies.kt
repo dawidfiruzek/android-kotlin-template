@@ -57,4 +57,5 @@ object TestLibs {
     const val testRunner = "com.android.support.test:runner:${Versions.testRunner}"
     const val espressoCore = "com.android.support.test.espresso:espresso-core:${Versions.expresso}"
     const val mockito = "org.mockito:mockito-core:${Versions.mockito}"
+    const val archTesting = "android.arch.core:core-testing:${Versions.lifecycle}"
 }
