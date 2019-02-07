@@ -6,6 +6,7 @@ import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import pl.dawidfiruzek.core.domain.UseCaseExecutor
+import pl.dawidfiruzek.core.domain.UseCaseExecutorImpl
 import javax.inject.Named
 
 @Module
@@ -44,7 +45,7 @@ class DomainModule {
             @Named(UI_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
-            UseCaseExecutor(
+            UseCaseExecutorImpl(
                     subscribeOnScheduler,
                     observeOnScheduler
             )
@@ -55,7 +56,7 @@ class DomainModule {
             @Named(IO_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
-            UseCaseExecutor(
+            UseCaseExecutorImpl(
                     subscribeOnScheduler,
                     observeOnScheduler
             )
@@ -66,7 +67,7 @@ class DomainModule {
             @Named(COMPUTATION_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
-            UseCaseExecutor(
+            UseCaseExecutorImpl(
                     subscribeOnScheduler,
                     observeOnScheduler
             )
@@ -77,7 +78,7 @@ class DomainModule {
             @Named(NEW_THREAD_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
-            UseCaseExecutor(
+            UseCaseExecutorImpl(
                     subscribeOnScheduler,
                     observeOnScheduler
             )
