@@ -58,7 +58,7 @@ abstract class AppModule {
 abstract class ActivityBindings {
 
     /*
-    todo add activities bindings here e.g.
+    todo add activities bindings here in case of need e.g.
     @ContributesAndroidInjector
     abstract fun splash(): SplashActivity
      */
