@@ -1,8 +1,9 @@
 package {{ cookiecutter.core_package_name }}.utils.resources
 
 import android.content.Context
+import javax.inject.Inject
 
-class ResourceProviderImpl(
+class ResourceProviderImpl @Inject constructor(
         private val context: Context
 ) : ResourceProvider {
 

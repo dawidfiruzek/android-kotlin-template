@@ -43,9 +43,3 @@ abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
         super.onAttach(context)
     }
 }
-
-interface NavigationEvent
-
-interface NavigationListener {
-    fun handleEvent(event: NavigationEvent)
-}
