@@ -1,4 +1,4 @@
-package {{ cookiecutter.core_package_name }}.utils
+package {{ cookiecutter.core_package_name }}.presentation
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider

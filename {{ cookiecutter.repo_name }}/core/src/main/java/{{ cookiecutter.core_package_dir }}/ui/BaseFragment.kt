@@ -19,8 +19,8 @@ abstract class BaseFragment<VM : ViewModel, DB: ViewDataBinding> : Fragment() {
 
     @Inject lateinit var viewModelFactory: ViewModelFactory<VM>
     protected lateinit var viewModel: VM
-    protected lateinit var dataBinding: DB
     protected abstract val viewModelClassToken: Class<VM>
+    private lateinit var dataBinding: DB
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
