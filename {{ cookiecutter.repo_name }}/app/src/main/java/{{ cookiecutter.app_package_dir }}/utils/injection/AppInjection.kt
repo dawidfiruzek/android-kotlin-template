@@ -21,6 +21,7 @@ import javax.inject.Singleton
 @Component(modules = [
     AndroidInjectionModule::class,
     AppModule::class,
+    ActivityBindings::class,
     NetworkModule::class,
     ConfigurationModule::class,
     ResourcesModule::class,
@@ -51,4 +52,14 @@ abstract class AppModule {
 
     @Binds
     abstract fun fragment(fragment: Fragment): Fragment
+}
+
+@Module
+abstract class ActivityBindings {
+
+    /*
+    todo add activities bindings here e.g.
+    @ContributesAndroidInjector
+    abstract fun splash(): SplashActivity
+     */
 }
