@@ -48,6 +48,7 @@ object Libs {
     const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
     const val stethoNetwork = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
     const val constraintLayout = "com.android.support.constraint:constraint-layout:${Versions.constraintLayout}"
+    const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
     const val lifecycle = "android.arch.lifecycle:extensions:${Versions.lifecycle}"
     const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
 }
