@@ -41,44 +41,44 @@ class DomainModule {
     @Provides
     @Named(UI_EXECUTION)
     fun uiExecutor(
-            @Named(UI_EXECUTION) subscribrOnScheduler: Scheduler,
+            @Named(UI_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
             UseCaseExecutor(
-                    subscribrOnScheduler,
+                    subscribeOnScheduler,
                     observeOnScheduler
             )
 
     @Provides
     @Named(IO_EXECUTION)
     fun ioExecutor(
-            @Named(IO_EXECUTION) subscribrOnScheduler: Scheduler,
+            @Named(IO_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
             UseCaseExecutor(
-                    subscribrOnScheduler,
+                    subscribeOnScheduler,
                     observeOnScheduler
             )
 
     @Provides
     @Named(COMPUTATION_EXECUTION)
     fun computationExecutor(
-            @Named(COMPUTATION_EXECUTION) subscribrOnScheduler: Scheduler,
+            @Named(COMPUTATION_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
             UseCaseExecutor(
-                    subscribrOnScheduler,
+                    subscribeOnScheduler,
                     observeOnScheduler
             )
 
     @Provides
     @Named(NEW_THREAD_EXECUTION)
     fun newThreadExecutor(
-            @Named(NEW_THREAD_EXECUTION) subscribrOnScheduler: Scheduler,
+            @Named(NEW_THREAD_EXECUTION) subscribeOnScheduler: Scheduler,
             @Named(UI_EXECUTION) observeOnScheduler: Scheduler
     ): UseCaseExecutor =
             UseCaseExecutor(
-                    subscribrOnScheduler,
+                    subscribeOnScheduler,
                     observeOnScheduler
             )
 }
